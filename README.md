@@ -4,7 +4,7 @@
 
 Microsoft Fabric Ontologies define the entity types and relationships that describe your data model — things like `Customer`, `Order`, `Product`, and the properties they carry (`customer_id`, `order_date`, `status`, etc.).
 
-The **Fabric portal does not currently provide a UI** for modifying an existing ontology's entity types after they are created. Changes must go through the Fabric REST API, which requires constructing a correctly-structured JSON payload, base64-encoding every part, and handling asynchronous (LRO) responses. A single mistake in field structure causes the entire import to fail with a vague `ALMOperationImportFailed` error.
+The **Fabric portal provides a UI** for modifying an existing ontology's entity types after they are created but this requires manual work on the UI which is error prome. This PowerShell script provides a way to automate the creation and modification of entities programatically which makes it repeatable, reusable and less error prone.  Changes must go through the Fabric REST API, which requires constructing a correctly-structured JSON payload, base64-encoding every part, and handling asynchronous (LRO) responses. A single mistake in field structure causes the entire import to fail with a vague `ALMOperationImportFailed` error.
 
 **`Update-Ontology.ps1`** solves this by giving you an interactive, menu-driven terminal workflow that:
 
